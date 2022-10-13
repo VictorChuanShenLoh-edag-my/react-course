@@ -1,5 +1,6 @@
 import './App.css';
 import Expenses from './components/Expenses';
+import ExpensesFilter from './components/ExpensesFilter/ExpensesFilter';
 import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
@@ -23,8 +24,7 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={onAddExpenseHandler}></NewExpense>
-      <Expenses date={expensesList[0].date} title={expensesList[0].title} price={expensesList[0].price}></Expenses>
-      <Expenses date={expensesList[1].date} title={expensesList[1].title} price={expensesList[1].price}></Expenses>
+      <Expenses item = {expensesList}></Expenses>
     </div>
   );
 }
